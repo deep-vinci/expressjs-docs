@@ -115,3 +115,9 @@ app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
 });
 ```
+
+## Express Routers
+
+express routers are used to create modular URL path handlers
+
+[WIP Route Handlers]
