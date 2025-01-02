@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 
-const timeLogger = (req, res, next) => {
+const timeLogger = (req, res, callNextFunction) => {
     console.log(Date.now());
-    next();
+    callNextFunction();
 }
 /* 
 /elephant
@@ -16,7 +16,7 @@ router.route("/")
 
 router.route("/about")
     .get(timeLogger, (req, res) => {
-        res.send("About elephant");
+        res.redirect("/");
     })
 
 
